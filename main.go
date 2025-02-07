@@ -1,7 +1,7 @@
 package main
 
-import "log"
+import "template/cmd"
 
 func main() {
-	log.Println("WIP")
+	cmd.Execute()
 }

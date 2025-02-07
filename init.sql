@@ -1,0 +1,13 @@
+CREATE TABLE Users (
+    id BIGSERIAL PRIMARY KEY,
+	email VARCHAR UNIQUE NOT NULL,
+	password VARCHAR NOT NULL
+);
+
+CREATE TABLE Addresses (
+    id BIGSERIAL PRIMARY KEY,
+    user_id BIGINT REFERENCES Users (id) NOT NULL,
+    name VARCHAR NOT NULL,
+	phone_number VARCHAR NOT NULL
+);
+
